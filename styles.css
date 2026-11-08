@@ -108,3 +108,27 @@ body.entry-open{overflow:hidden}.entry-screen[hidden]{display:none}.entry-screen
   .hero-footnote{margin-top:12px}
   .hero-ctas .button{padding:13px 21px}
 }
+
+
+/* V10 — lift the hero into unused upper space and restore deliberate rhythm. */
+@media (min-width:901px){
+  .hero{padding-top:0}
+  .hero-inner{transform:translateY(-12px)}
+  .hero h1{
+    margin-top:clamp(20px,3.7vh,38px);
+    margin-bottom:clamp(14px,2.4vh,25px);
+  }
+  .hero-subtitle{margin:clamp(13px,2.6vh,25px) 0}
+  .hero-copy{
+    margin-bottom:clamp(17px,3.2vh,31px);
+    line-height:1.8;
+  }
+  .hero-footnote{margin-top:clamp(17px,3vh,30px)}
+}
+@media (min-width:901px) and (max-height:680px){
+  .hero-inner{transform:translateY(-10px);padding-top:8px;padding-bottom:8px}
+  .hero h1{margin-top:20px;margin-bottom:15px}
+  .hero-subtitle{margin:14px 0}
+  .hero-copy{margin-bottom:18px;line-height:1.65}
+  .hero-footnote{margin-top:18px}
+}
